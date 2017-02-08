@@ -69,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 if ((scoreB - 2) >= 0) {
                     scoreB -= 2;
                     binding.scoreB.setText(String.valueOf(scoreB));
-                } else {
-                    Toast.makeText(this, "Nilai Tidak Valid", Toast.LENGTH_LONG).show();
                 }
                 break;
             case R.id.btn_kiri_dua:
