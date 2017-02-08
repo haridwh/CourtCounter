@@ -261,8 +261,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:gravity="bottom">
+                android:gravity="bottom"
+                android:weightSum="1">
+
                 <Button
+                    android:padding="8dp"
                     android:id="@+id/btn_reset"
                     android:hint="@string/reset"
                     android:textStyle="bold"
@@ -273,8 +276,23 @@
                     app:backgroundTint="@color/colorPrimary"
                     android:onClick="@{vm.reset}"/>
 
+                <ImageView
+                    android:layout_width="112dp"
+                    android:layout_height="0dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_weight="1"
+                    android:id="@+id/imageView"
+                    android:layout_gravity="center"/>
+
                 <TextView
-                    android:padding="8dp"
+                    android:padding="2dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="@string/app_name"/>
+
+                <TextView
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
