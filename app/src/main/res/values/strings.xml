@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Court Counter</string>
+
+    <string name="team_a">Team A</string>
+    <string name="team_b">Team B</string>
+
+    <string name="score_default">0</string>
+
+    <string name="positif_tiga">3</string>
+    <string name="positif_dua">2</string>
+    <string name="positi_satu">1</string>
+
+    <string name="negatif_tiga">-3</string>
+    <string name="negatif_dua">-2</string>
+    <string name="negatif_satu">-1</string>
+
+    <string name="reset">RESET</string>
+
+    <string name="created">CREATED BY NAMA GAN</string>
+</resources>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.skday.courtcounter.MainActivity">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.skday.courtcounter.MainActivity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:popupTheme="@style/AppTheme.PopUpOverlay"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <LinearLayout
+                    android:paddingBottom="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/team_a"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/score_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:textSize="52sp"
+                        android:textColor="@android:color/black"
+                        android:text="@string/score_default"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_kiri_min_satu"
+                            android:hint="@string/negatif_satu"
+                            android:textColorHint="@android:color/black"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{vm.satu}"/>
+
+                        <Button
+                            android:id="@+id/btn_kiri_satu"
+                            android:hint="@string/positi_satu"
+                            android:textColorHint="@android:color/black"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{vm.satu}"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_kiri_min_dua"
+                            android:hint="@string/negatif_dua"
+                            android:textColorHint="@android:color/black"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{vm.dua}"/>
+
+                        <Button
+                            android:id="@+id/btn_kiri_dua"
+                            android:hint="@string/positif_dua"
+                            android:textColorHint="@android:color/black"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{vm.dua}"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_kiri_min_tiga"
+                            android:hint="@string/negatif_tiga"
+                            android:textColorHint="@android:color/black"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{vm.tiga}"/>
+
+                        <Button
+                            android:id="@+id/btn_kiri_tiga"
+                            android:hint="@string/positif_tiga"
+                            android:textColorHint="@android:color/black"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{vm.tiga}"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#000"/>
+
+                <LinearLayout
+                    android:paddingBottom="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/team_b"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/score_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:textSize="52sp"
+                        android:textColor="@android:color/black"
+                        android:text="@string/score_default"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_kanan_min_satu"
+                            android:hint="@string/negatif_satu"
+                            android:textColorHint="@android:color/black"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{vm.satu}"/>
+
+                        <Button
+                            android:id="@+id/btn_kanan_satu"
+                            android:hint="@string/positi_satu"
+                            android:textColorHint="@android:color/black"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{vm.satu}"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_kanan_min_dua"
+                            android:hint="@string/negatif_dua"
+                            android:textColorHint="@android:color/black"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{vm.dua}"/>
+
+                        <Button
+                            android:id="@+id/btn_kanan_dua"
+                            android:hint="@string/positif_dua"
+                            android:textColorHint="@android:color/black"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{vm.dua}"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_kanan_min_tiga"
+                            android:hint="@string/negatif_tiga"
+                            android:textColorHint="@android:color/black"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{vm.tiga}"/>
+
+                        <Button
+                            android:id="@+id/btn_kanan_tiga"
+                            android:hint="@string/positif_tiga"
+                            android:textColorHint="@android:color/black"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{vm.tiga}"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom">
+                <Button
+                    android:id="@+id/btn_reset"
+                    android:hint="@string/reset"
+                    android:textStyle="bold"
+                    android:textColorHint="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:backgroundTint="@color/colorPrimary"
+                    android:onClick="@{vm.reset}"/>
+
+                <TextView
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="@string/created"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
