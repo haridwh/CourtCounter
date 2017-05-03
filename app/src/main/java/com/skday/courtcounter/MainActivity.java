@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.skday.courtcounter.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private ActivityMainBinding binding;
     private int scoreA = 0;
@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
         binding.setVm(this);
         setSupportActionBar(binding.toolBar);
         getSupportActionBar().setTitle(R.string.app_name);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            binding.teamA.setText(extras.getString("team_a"));
+            binding.teamB.setText(extras.getString("team_b"));
+        }
     }
 
     public void reset(View view) {

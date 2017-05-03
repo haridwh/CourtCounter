@@ -24,7 +24,7 @@
                 android:id="@+id/toolBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:popupTheme="@style/AppTheme.PopUpOverlay"/>
+                app:popupTheme="@style/AppTheme.PopUpOverlay"/>
         </android.support.design.widget.AppBarLayout>
 
         <LinearLayout
@@ -49,13 +49,15 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/team_a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:padding="8dp"
-                        android:text="@string/team_a"
                         android:textSize="18sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:text="@string/team_a"
+                        android:background="@android:color/transparent"/>
 
                     <TextView
                         android:id="@+id/score_a"
@@ -158,13 +160,15 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/team_b"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:padding="8dp"
-                        android:text="@string/team_b"
+                        tools:text="@string/team_b"
                         android:textSize="18sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:background="@android:color/transparent"/>
 
                     <TextView
                         android:id="@+id/score_b"
